@@ -1,0 +1,49 @@
+runfile('E:/2WORK/python/Practice_04_1/practice_04_1_GRU.py', wdir='E:/2WORK/python/Practice_04_1')
+Initial statistics:
+Minimum value:   104
+Maximum value:   622
+
+Resulting statistics:
+Minimum value:   0.0
+Maximum value:   1.0
+Example of the obtained data:
+
+Data corresponding to the first x:
+tensor([[0.0154],
+        [0.0270],
+        [0.0541],
+        [0.0483],
+        [0.0328],
+        [0.0598],
+        [0.0849],
+        [0.0849]])
+Data corresponding to the first y:
+tensor([0.0618])
+Train data:
+x shape: torch.Size([108, 8, 1])
+y shape: torch.Size([108, 1])
+
+Test data:
+x shape: torch.Size([28, 8, 1])
+y shape: torch.Size([28, 1])
+Simple GRU training process with MSE loss:
+Epoch: 0,       loss: 0.03470
+Epoch: 100,     loss: 0.00319
+Epoch: 200,     loss: 0.00254
+Epoch: 300,     loss: 0.00236
+Epoch: 400,     loss: 0.00233
+Epoch: 500,     loss: 0.00222
+Epoch: 600,     loss: 0.00214
+Epoch: 700,     loss: 0.00208
+Epoch: 800,     loss: 0.00190
+Epoch: 900,     loss: 0.00167
+Epoch: 1000,    loss: 0.00149
+Epoch: 1100,    loss: 0.00131
+Epoch: 1200,    loss: 0.00120
+Epoch: 1300,    loss: 0.00111
+Epoch: 1400,    loss: 0.00106
+Epoch: 1500,    loss: 0.00103
+Epoch: 1600,    loss: 0.00105
+Epoch: 1700,    loss: 0.00100
+Epoch: 1800,    loss: 0.00094
+Epoch: 1900,    loss: 0.00092
