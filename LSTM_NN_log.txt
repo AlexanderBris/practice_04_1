@@ -1,0 +1,111 @@
+runfile('E:/2WORK/python/Practice_04_1/practice_04_1_LSTM.py', wdir='E:/2WORK/python/Practice_04_1')
+Dictionary for mapping character to the integer:
+{' ': 7,
+ 'a': 4,
+ 'c': 6,
+ 'd': 3,
+ 'e': 11,
+ 'f': 1,
+ 'g': 14,
+ 'h': 2,
+ 'i': 12,
+ 'm': 9,
+ 'n': 5,
+ 'o': 0,
+ 'r': 10,
+ 'u': 8,
+ 'v': 16,
+ 'w': 15,
+ 'y': 13}
+The longest string has 15 characters.
+
+Initial texts:
+['hey how are you', 'good i am fine', 'have a nice day']
+Resulting texts:
+['hey how are you', 'good i am fine ', 'have a nice day']
+Input sequence:    'hey how are yo'
+Target sequence:   'ey how are you'
+
+Input sequence:    'good i am fine'
+Target sequence:   'ood i am fine '
+
+Input sequence:    'have a nice da'
+Target sequence:   'ave a nice day'
+
+Encodded input sequence:  [2, 11, 13, 7, 2, 0, 15, 7, 4, 10, 11, 7, 13, 0]
+Encodded target sequence: [11, 13, 7, 2, 0, 15, 7, 4, 10, 11, 7, 13, 0, 8]
+
+Encodded input sequence:  [14, 0, 0, 3, 7, 12, 7, 4, 9, 7, 1, 12, 5, 11]
+Encodded target sequence: [0, 0, 3, 7, 12, 7, 4, 9, 7, 1, 12, 5, 11, 7]
+
+Encodded input sequence:  [2, 4, 16, 11, 7, 4, 7, 5, 12, 6, 11, 7, 3, 4]
+Encodded target sequence: [4, 16, 11, 7, 4, 7, 5, 12, 6, 11, 7, 3, 4, 13]
+
+Input shape: (3, 14, 17) --> (Batch Size, Sequence Length, One-Hot Encoding Size)
+[[0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
+ [0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
+Epoch: 10/500        Loss: 2.6515
+Epoch: 20/500        Loss: 2.4360
+Epoch: 30/500        Loss: 2.3001
+Epoch: 40/500        Loss: 2.0770
+Epoch: 50/500        Loss: 1.7647
+Epoch: 60/500        Loss: 1.3840
+Epoch: 70/500        Loss: 1.0133
+Epoch: 80/500        Loss: 0.7096
+Epoch: 90/500        Loss: 0.4919
+Epoch: 100/500       Loss: 0.3410
+Epoch: 110/500       Loss: 0.2428
+Epoch: 120/500       Loss: 0.1809
+Epoch: 130/500       Loss: 0.1423
+Epoch: 140/500       Loss: 0.1177
+Epoch: 150/500       Loss: 0.1012
+Epoch: 160/500       Loss: 0.0896
+Epoch: 170/500       Loss: 0.0810
+Epoch: 180/500       Loss: 0.0745
+Epoch: 190/500       Loss: 0.0694
+Epoch: 200/500       Loss: 0.0653
+Epoch: 210/500       Loss: 0.0619
+Epoch: 220/500       Loss: 0.0591
+Epoch: 230/500       Loss: 0.0568
+Epoch: 240/500       Loss: 0.0547
+Epoch: 250/500       Loss: 0.0530
+Epoch: 260/500       Loss: 0.0515
+Epoch: 270/500       Loss: 0.0501
+Epoch: 280/500       Loss: 0.0490
+Epoch: 290/500       Loss: 0.0479
+Epoch: 300/500       Loss: 0.0470
+Epoch: 310/500       Loss: 0.0461
+Epoch: 320/500       Loss: 0.0454
+Epoch: 330/500       Loss: 0.0447
+Epoch: 340/500       Loss: 0.0441
+Epoch: 350/500       Loss: 0.0435
+Epoch: 360/500       Loss: 0.0430
+Epoch: 370/500       Loss: 0.0425
+Epoch: 380/500       Loss: 0.0420
+Epoch: 390/500       Loss: 0.0416
+Epoch: 400/500       Loss: 0.0412
+Epoch: 410/500       Loss: 0.0409
+Epoch: 420/500       Loss: 0.0405
+Epoch: 430/500       Loss: 0.0402
+Epoch: 440/500       Loss: 0.0399
+Epoch: 450/500       Loss: 0.0397
+Epoch: 460/500       Loss: 0.0394
+Epoch: 470/500       Loss: 0.0392
+Epoch: 480/500       Loss: 0.0390
+Epoch: 490/500       Loss: 0.0387
+Epoch: 500/500       Loss: 0.0385
+good i am fine 
+good i am fine 
+good i am fine 
